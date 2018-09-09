@@ -1,0 +1,19 @@
+﻿@model WebApplication.Models.RegisterUserViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>New User</h2>
+@using (Html.BeginForm("Register","User")) {
+    <div class="row">
+        <div class="col-md-3">
+            UserName
+        </div>
+        <div class="col-md-3">
+            @Html.TextBoxFor(model => model.UserName)
+        </div>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Confirm"/>
+}

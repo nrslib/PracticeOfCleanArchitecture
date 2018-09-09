@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Index</h2>
+<div class="row">
+    @Html.ActionLink(
+        "New User",
+        "NewUser",
+        "User",
+        new {},
+        new {@class = "btn btn-primary" }
+        )
+</div>
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>UserName</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var summary in Model) {
+            <tr>
+                <td>@summary.Id</td>
+                <td>@summary.UserName</td>
+            </tr>
+        }
+        </tbody>
+    </table>    
+</div>
