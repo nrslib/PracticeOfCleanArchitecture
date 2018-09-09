@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Domain.Application.Users;
+using Domain.Domain.Users;
 using InMemoryInfrastructure.Users;
 using UseCase.Users.Create;
 
@@ -14,10 +15,11 @@ namespace Domain.Tests.Users
         public void TestCreateUser() {
             var repository = new InMemoryUserRepository();
             var presenter = new UserCreateCollector();
-            var interactor = new UserCreateInteractor(repository, presenter);
+            var interactor = CreateInteractor(repository, presenter);
             var request = new UserCreateRequest("TestUser");
 
             interactor.Handle(request);
+
             var expectedPercentages = new List<int> {
                 10,
                 30,
@@ -29,6 +31,13 @@ namespace Domain.Tests.Users
             Assert.IsNotNull(presenter.Response.UserId);
             var inserted = repository.FindByUserName("TestUser");
             Assert.IsNotNull(inserted);
+        }
+
+        private IUserCreateUseCase CreateInteractor(
+            IUserRepository repository,
+            IUserCreatePresenter presenter
+        ) {
+            return new UserCreateInteractor(repository, presenter);
         }
     }
 }
