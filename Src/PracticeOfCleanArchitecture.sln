@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InMemoryInfrastructure", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MockInteractor", "MockInteractor\MockInteractor.csproj", "{27339F13-D0A1-41D3-8981-CF66DCB696B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{E4BE4512-92BF-4D4D-8682-E3E116F1AFCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{E4BE4512-92BF-4D4D-8682-E3E116F1AFCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Tests", "Domain.Tests\Domain.Tests.csproj", "{C3EAE061-5369-48B0-AE3B-1E194435C68F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{E4BE4512-92BF-4D4D-8682-E3E116F1AFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4BE4512-92BF-4D4D-8682-E3E116F1AFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4BE4512-92BF-4D4D-8682-E3E116F1AFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3EAE061-5369-48B0-AE3B-1E194435C68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3EAE061-5369-48B0-AE3B-1E194435C68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3EAE061-5369-48B0-AE3B-1E194435C68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3EAE061-5369-48B0-AE3B-1E194435C68F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
