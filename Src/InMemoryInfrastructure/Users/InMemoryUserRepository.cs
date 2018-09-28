@@ -9,7 +9,7 @@ namespace InMemoryInfrastructure.Users
         private readonly Dictionary<string, User> data = new Dictionary<string, User>();
 
         public void Save(User user) {
-            data[user.Id] = user;
+            data[user.Id] = cloneUser(user);
         }
 
         public User FindByUserName(string username) {
@@ -19,6 +19,10 @@ namespace InMemoryInfrastructure.Users
         public IEnumerable<User> FindAll()
         {
             return data.Values;
+        }
+
+        private User cloneUser(User user) {
+            return new User(user.Id, user.UserName);
         }
     }
 }
