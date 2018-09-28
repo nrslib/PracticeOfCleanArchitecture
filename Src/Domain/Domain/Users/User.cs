@@ -6,7 +6,7 @@ namespace Domain.Domain.Users
     {
         public User(string id, string userName) {
             Id = id;
-            userName = UserName;
+            UserName = userName;
         }
 
         public User(string userName) {
